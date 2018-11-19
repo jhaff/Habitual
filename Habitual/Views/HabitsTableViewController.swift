@@ -14,6 +14,8 @@ class HabitsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavBar()
+
         // Do any additional setup after loading the view.
     }
 
@@ -43,4 +45,20 @@ class HabitsTableViewController: UITableViewController {
     }
     */
 
+}
+
+
+extension HabitsTableViewController {
+    
+    func setupNavBar() {
+        title = "Habitual"
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pressAddHabit(_:)))
+        navigationItem.rightBarButtonItem = addButton
+    }
+    
+    @objc func pressAddHabit(_ sender: UIBarButtonItem) {
+        names.insert("Hello, World!", at: 0)
+        let topIndexPath = IndexPath(row: 0, section: 0)
+        tableView.insertRows(at: [topIndexPath], with: .automatic)
+    }
 }
