@@ -13,6 +13,7 @@
 		351AC2D9219A3464001669F5 /* HabitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AC2D7219A3464001669F5 /* HabitsTableViewController.swift */; };
 		351AC2DA219A3464001669F5 /* HabitsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 351AC2D8219A3464001669F5 /* HabitsTableViewController.xib */; };
 		351AC2DD219A354D001669F5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AC2DC219A354D001669F5 /* UIViewControllerExtensions.swift */; };
+		351AC2DF21A381EA001669F5 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AC2DE21A381EA001669F5 /* Habit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		351AC2D7219A3464001669F5 /* HabitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsTableViewController.swift; sourceTree = "<group>"; };
 		351AC2D8219A3464001669F5 /* HabitsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitsTableViewController.xib; sourceTree = "<group>"; };
 		351AC2DC219A354D001669F5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		351AC2DE21A381EA001669F5 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		351AC2C4219A2FDF001669F5 /* Habitual */ = {
 			isa = PBXGroup;
 			children = (
+				351AC2DE21A381EA001669F5 /* Habit.swift */,
 				351AC2DC219A354D001669F5 /* UIViewControllerExtensions.swift */,
 				351AC2C5219A2FDF001669F5 /* AppDelegate.swift */,
 				351AC2DB219A3486001669F5 /* Views */,
@@ -148,6 +151,7 @@
 			files = (
 				351AC2D9219A3464001669F5 /* HabitsTableViewController.swift in Sources */,
 				351AC2DD219A354D001669F5 /* UIViewControllerExtensions.swift in Sources */,
+				351AC2DF21A381EA001669F5 /* Habit.swift in Sources */,
 				351AC2C6219A2FDF001669F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
