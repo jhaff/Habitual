@@ -12,10 +12,10 @@ class HabitsTableViewController: UITableViewController {
     var names: [String] = ["Alan", "Adriana", "Adam", "Anne", "Mitchell", "Dani"]
     
     var habits: [Habit] = [
-        Habit(title: "Go to bed before 10p"),
-        Habit(title: "Drink 8 Glasses of Water"),
-        Habit(title: "Commit Today"),
-        Habit(title: "Stand up every Hour")
+        Habit(title: "Go to bed before 10p", image: Habit.Images.book),
+        Habit(title: "Drink 8 Glasses of Water", image: Habit.Images.book),
+        Habit(title: "Commit Today", image: Habit.Images.book),
+        Habit(title: "Stand up every Hour", image: Habit.Images.book)
     ]
 
     override func viewDidLoad() {
