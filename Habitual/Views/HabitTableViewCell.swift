@@ -16,7 +16,25 @@ class HabitTableViewCell: UITableViewCell {
     
     @IBOutlet weak var labelStreaks: UILabel!
     
+    // Set the identifier for the custom cell
+    static let identifier = "habit cell"
     
+    func configure(_ habit: Habit) {
+        self.imageViewIcon.image = habit.selectedImage.image
+        self.labelHabitTitle.text = habit.title
+        self.labelStreaks.text = "streak: \(habit.currentStreak)"
+        
+        if habit.hasCompletedForToday {
+            self.accessoryType = .checkmark
+        } else {
+            self.accessoryType = .disclosureIndicator
+        }
+    }
+    
+    // Returning the xib file after instantiating it
+    static var nib: UINib {
+        return UINib(nibName: String(describing: self), bundle: nil)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

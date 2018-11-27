@@ -22,6 +22,11 @@ class HabitsTableViewController: UITableViewController {
         super.viewDidLoad()
 
         setupNavBar()
+        
+        tableView.register(
+            HabitTableViewCell.nib,
+            forCellReuseIdentifier: HabitTableViewCell.identifier
+        )
 
         // Do any additional setup after loading the view.
     }
@@ -33,25 +38,15 @@ class HabitsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: HabitTableViewCell.identifier,
+            for: indexPath
+            ) as! HabitTableViewCell
         
-        var cell: UITableViewCell
-        
-        if let dequeueCell = tableView.dequeueReusableCell(withIdentifier: "cell") {
-            
-            cell = dequeueCell
-            
-        } else {
-            
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-            
-        }
-        
-        let habit = habits[indexPath.row]
-        
-        cell.textLabel?.text = habit.title
+        let habit = persistance.habits[indexPath.row]
+        cell.configure(habit)
         
         return cell
-        
     }
 
     
