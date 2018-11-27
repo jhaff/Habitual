@@ -67,6 +67,43 @@ struct PersistenceLayer {
         self.saveHabits()
     }
     
+    // Mark Habit Complete
+    
+    // Line 1
+    mutating func markHabitAsCompleted(_ habitIndex: Int) -> Habit {
+        
+        // Line 2
+        var updatedHabit = self.habits[habitIndex]
+        
+        // Line 3
+        guard updatedHabit.hasCompletedForToday == false else { return updatedHabit }
+        
+        // Line 4
+        updatedHabit.numberOfCompletions += 1
+        
+        // Line 5
+        if let lastCompletionDate = updatedHabit.lastCompletionDate, lastCompletionDate.isYesterday {
+            updatedHabit.currentStreak += 1
+        } else {
+            updatedHabit.currentStreak = 1
+        }
+        
+        // Line 6
+        if updatedHabit.currentStreak > updatedHabit.bestStreak {
+            updatedHabit.bestStreak = updatedHabit.currentStreak
+        }
+        
+        // Line 7
+        let now = Date()
+        updatedHabit.lastCompletionDate = now
+        
+        // Line 8
+        self.habits[habitIndex] = updatedHabit
+        self.saveHabits()
+        
+        return updatedHabit
+    }
+    
     init() {
         // Line 3
         self.loadHabits()
