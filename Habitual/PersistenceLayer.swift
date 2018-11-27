@@ -58,6 +58,15 @@ struct PersistenceLayer {
         userDefaults.set(habitsData, forKey: PersistenceLayer.userDefaultsHabitsKeyValue)
     }
     
+    // delete habit
+    mutating func delete(_ habitIndex: Int) {
+        // Remove habit at the given index
+        self.habits.remove(at: habitIndex)
+        
+        // Persist the changes we made to our habits array
+        self.saveHabits()
+    }
+    
     init() {
         // Line 3
         self.loadHabits()
