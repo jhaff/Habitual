@@ -17,6 +17,7 @@
 		351AC2E121A7775D001669F5 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AC2E021A7775D001669F5 /* DateExtensions.swift */; };
 		351AC34A21B2063B001669F5 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AC34821B2063B001669F5 /* HabitTableViewCell.swift */; };
 		351AC34B21B2063B001669F5 /* HabitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 351AC34921B2063B001669F5 /* HabitTableViewCell.xib */; };
+		3543999421ACF7CB0096D1AA /* PersistenceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543999321ACF7CB0096D1AA /* PersistenceLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		351AC2E021A7775D001669F5 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		351AC34821B2063B001669F5 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		351AC34921B2063B001669F5 /* HabitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitTableViewCell.xib; sourceTree = "<group>"; };
+		3543999321ACF7CB0096D1AA /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		351AC2C4219A2FDF001669F5 /* Habitual */ = {
 			isa = PBXGroup;
 			children = (
+				3543999321ACF7CB0096D1AA /* PersistenceLayer.swift */,
 				351AC2E021A7775D001669F5 /* DateExtensions.swift */,
 				351AC2DE21A381EA001669F5 /* Habit.swift */,
 				351AC2DC219A354D001669F5 /* UIViewControllerExtensions.swift */,
@@ -162,6 +165,7 @@
 				351AC2D9219A3464001669F5 /* HabitsTableViewController.swift in Sources */,
 				351AC2E121A7775D001669F5 /* DateExtensions.swift in Sources */,
 				351AC2DD219A354D001669F5 /* UIViewControllerExtensions.swift in Sources */,
+				3543999421ACF7CB0096D1AA /* PersistenceLayer.swift in Sources */,
 				351AC2DF21A381EA001669F5 /* Habit.swift in Sources */,
 				351AC34A21B2063B001669F5 /* HabitTableViewCell.swift in Sources */,
 				351AC2C6219A2FDF001669F5 /* AppDelegate.swift in Sources */,

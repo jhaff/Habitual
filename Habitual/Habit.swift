@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Habit {
+struct Habit: Codable{
 
     var title: String
     let dateCreated: Date = Date()
@@ -30,7 +30,7 @@ struct Habit {
         self.selectedImage = image
     }
     
-    enum Images: Int, CaseIterable {
+    enum Images: Int, Codable, CaseIterable {
         case book
         case bulb
         case clock
