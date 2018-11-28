@@ -9,14 +9,16 @@
 import UIKit
 
 class HabitsTableViewController: UITableViewController {
-    var names: [String] = ["Alan", "Adriana", "Adam", "Anne", "Mitchell", "Dani"]
-    
-    var habits: [Habit] = [
-        Habit(title: "Go to bed before 10p", image: Habit.Images.book),
-        Habit(title: "Drink 8 Glasses of Water", image: Habit.Images.book),
-        Habit(title: "Commit Today", image: Habit.Images.book),
-        Habit(title: "Stand up every Hour", image: Habit.Images.book)
-    ]
+//    var names: [String] = ["Alan", "Adriana", "Adam", "Anne", "Mitchell", "Dani"]
+//
+//    var habits: [Habit] = [
+//        Habit(title: "Go to bed before 10p", image: Habit.Images.book),
+//        Habit(title: "Drink 8 Glasses of Water", image: Habit.Images.book),
+//        Habit(title: "Commit Today", image: Habit.Images.book),
+//        Habit(title: "Stand up every Hour", image: Habit.Images.book)
+//    ]
+
+    private var persistance = PersistenceLayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +34,13 @@ class HabitsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return persistance.habits.count
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        return habits.count
-        
+        persistance.setNeedsToReloadHabits()
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
