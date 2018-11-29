@@ -18,6 +18,8 @@
 		351AC34A21B2063B001669F5 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351AC34821B2063B001669F5 /* HabitTableViewCell.swift */; };
 		351AC34B21B2063B001669F5 /* HabitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 351AC34921B2063B001669F5 /* HabitTableViewCell.xib */; };
 		3543999421ACF7CB0096D1AA /* PersistenceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3543999321ACF7CB0096D1AA /* PersistenceLayer.swift */; };
+		356B6AD221AF66FA0066733B /* AddHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356B6AD021AF66FA0066733B /* AddHabitViewController.swift */; };
+		356B6AD321AF66FA0066733B /* AddHabitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356B6AD121AF66FA0066733B /* AddHabitViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		351AC34821B2063B001669F5 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		351AC34921B2063B001669F5 /* HabitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HabitTableViewCell.xib; sourceTree = "<group>"; };
 		3543999321ACF7CB0096D1AA /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
+		356B6AD021AF66FA0066733B /* AddHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewController.swift; sourceTree = "<group>"; };
+		356B6AD121AF66FA0066733B /* AddHabitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddHabitViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 		351AC2DB219A3486001669F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				356B6AD021AF66FA0066733B /* AddHabitViewController.swift */,
+				356B6AD121AF66FA0066733B /* AddHabitViewController.xib */,
 				351AC34821B2063B001669F5 /* HabitTableViewCell.swift */,
 				351AC34921B2063B001669F5 /* HabitTableViewCell.xib */,
 				351AC2D7219A3464001669F5 /* HabitsTableViewController.swift */,
@@ -149,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				351AC2D0219A2FE0001669F5 /* LaunchScreen.storyboard in Resources */,
+				356B6AD321AF66FA0066733B /* AddHabitViewController.xib in Resources */,
 				351AC2DA219A3464001669F5 /* HabitsTableViewController.xib in Resources */,
 				351AC34B21B2063B001669F5 /* HabitTableViewCell.xib in Resources */,
 				351AC2CD219A2FE0001669F5 /* Assets.xcassets in Resources */,
@@ -169,6 +176,7 @@
 				351AC2DF21A381EA001669F5 /* Habit.swift in Sources */,
 				351AC34A21B2063B001669F5 /* HabitTableViewCell.swift in Sources */,
 				351AC2C6219A2FDF001669F5 /* AppDelegate.swift in Sources */,
+				356B6AD221AF66FA0066733B /* AddHabitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

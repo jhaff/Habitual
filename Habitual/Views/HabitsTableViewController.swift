@@ -78,8 +78,9 @@ extension HabitsTableViewController {
     }
     
     @objc func pressAddHabit(_ sender: UIBarButtonItem) {
-//        names.insert("Hello, World!", at: 0)
-//        let topIndexPath = IndexPath(row: 0, section: 0)
-//        tableView.insertRows(at: [topIndexPath], with: .automatic)
+        let addHabitVc = AddHabitViewController.instantiate()
+        let navigationController = UINavigationController(rootViewController: addHabitVc)
+        present(navigationController, animated: true, completion: nil)
+        
     }
 }
