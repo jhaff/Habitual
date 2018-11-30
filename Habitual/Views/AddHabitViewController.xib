@@ -20,9 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0m6-h0-JOc">
-                    <rect key="frame" x="67" y="269" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0m6-h0-JOc">
+                    <rect key="frame" x="15" y="35" width="345" height="500.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lbg-OW-I5o">
                         <size key="itemSize" width="50" height="50"/>
@@ -35,13 +34,25 @@
                         <outlet property="delegate" destination="-1" id="OQA-yc-yk2"/>
                     </connections>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hld-7I-GhM">
-                    <rect key="frame" x="151" y="602" width="72" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hld-7I-GhM">
+                    <rect key="frame" x="15" y="597" width="345" height="50"/>
+                    <color key="backgroundColor" red="0.21484375" green="1" blue="0.76085379464285718" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Uxm-Yb-6Hw"/>
+                    </constraints>
                     <state key="normal" title="Add Photo"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0m6-h0-JOc" secondAttribute="trailing" constant="15" id="8g6-D3-KcK"/>
+                <constraint firstItem="0m6-h0-JOc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="AzQ-nK-aEq"/>
+                <constraint firstItem="0m6-h0-JOc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="FTG-Dj-24O"/>
+                <constraint firstItem="hld-7I-GhM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="cZc-Y6-n3e"/>
+                <constraint firstItem="0m6-h0-JOc" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.75" id="ekl-Oy-1vv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hld-7I-GhM" secondAttribute="bottom" constant="20" id="gjH-JT-nqL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hld-7I-GhM" secondAttribute="trailing" constant="15" id="wLR-u2-qJW"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
