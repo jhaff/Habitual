@@ -12,6 +12,10 @@ class AddHabitViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBAction func pickPhotoButtonPressed(_ sender: Any) {
+        guard let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first else {return}
+        let confirmHabitVC = ConfirmHabitViewController.instantiate()
+        confirmHabitVC.habitImage = habitImages[selectedIndexPath.row]
+        navigationController?.pushViewController(confirmHabitVC, animated: true)
     }
     
     let habitImages = Habit.Images.allCases
@@ -86,6 +90,7 @@ extension AddHabitViewController: UICollectionViewDataSource, UICollectionViewDe
         cell?.layer.borderWidth = 2.0
         
         cell?.layer.borderColor = UIColor.yellow.cgColor
+        
         
     }
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
