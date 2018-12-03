@@ -18,7 +18,8 @@ class AddHabitViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        collectionView.allowsMultipleSelection = false
         setupNavBar()
 
         collectionView.register(HabitImageCollectionViewCell.nib, forCellWithReuseIdentifier: HabitImageCollectionViewCell.identifier)
@@ -78,4 +79,17 @@ extension AddHabitViewController: UICollectionViewDataSource, UICollectionViewDe
         return CGSize(width: collectionViewWidth/4, height: collectionViewWidth/4)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        
+        cell?.layer.borderWidth = 2.0
+        
+        cell?.layer.borderColor = UIColor.yellow.cgColor
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.layer.borderWidth = 0.0
+    }
 }
